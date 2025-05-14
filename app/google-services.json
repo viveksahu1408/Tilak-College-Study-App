@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "607979481167",
+    "project_id": "tilak-college-study-app-b5e41",
+    "storage_bucket": "tilak-college-study-app-b5e41.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607979481167:android:4bd0b8a4b4bfc9bca6a23a",
+        "android_client_info": {
+          "package_name": "com.example.tilakcollegestudy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXfiHh_V1AkUMFcc4R9lPQItIMFSvSuaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

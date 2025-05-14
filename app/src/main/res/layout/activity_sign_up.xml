@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF9800"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".ui.SignUpActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Register screen "
+
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/etEmailR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/input_field_bg"
+        android:hint="Email"
+
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="10dp"
+
+        android:textColorHint="#999999" />
+
+    <EditText
+        android:id="@+id/etPasswordR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_field_bg"
+        android:hint=" Password"
+        android:inputType="textPersonName"
+
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColorHint="#999999" />
+
+    <EditText
+        android:id="@+id/etPasswordR2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_field_bg"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColorHint="#999999" />
+
+    <Button
+        android:id="@+id/btnRegisterR"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="#07070D"
+        android:padding="10dp"
+        android:text="Register"
+
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnLoginR"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#060609"
+        android:padding="10dp"
+        android:text="Login"
+        android:textColor="@color/white" />
+
+</LinearLayout>
+
