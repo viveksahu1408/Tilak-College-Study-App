@@ -78,6 +78,19 @@ class SubjectSelectionActivity : AppCompatActivity() {
                 Toast.makeText(this@SubjectSelectionActivity, "Error fetching subjects", Toast.LENGTH_SHORT).show()
             }
         })
+
+        binding.home.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+        binding.notif.setOnClickListener {
+            startActivity(Intent(this, NotificationActivity::class.java))
+        }
+        binding.edit.setOnClickListener {
+            startActivity(Intent(this,UpdateActivity::class.java))
+        }
+        binding.user.setOnClickListener {
+            startActivity(Intent(this,ContactUsActivity::class.java))
+        }
     }
 
 

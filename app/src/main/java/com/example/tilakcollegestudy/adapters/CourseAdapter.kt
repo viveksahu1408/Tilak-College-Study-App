@@ -3,6 +3,7 @@ package com.example.tilakcollegestudy.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tilakcollegestudy.R
@@ -15,6 +16,7 @@ class CourseAdapter(
 
     class CourseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val courseText: TextView = itemView.findViewById(R.id.courseText)
+        val courseImage: ImageView = itemView.findViewById(R.id.courseImage)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CourseViewHolder {
@@ -26,6 +28,8 @@ class CourseAdapter(
     override fun onBindViewHolder(holder: CourseViewHolder, position: Int) {
         val course = courseList[position]
         holder.courseText.text = course.courseName
+        holder.courseImage.setImageResource(course.imageResId)
+
         holder.itemView.setOnClickListener {
             onItemClick(course.courseName)
         }

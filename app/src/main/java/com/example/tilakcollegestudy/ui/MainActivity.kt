@@ -24,13 +24,22 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private val viewModel: AuthViewModel by viewModels()
 
+//    private val courseList = listOf(
+//        CourseModel("BA"),
+//        CourseModel("BSc"),
+//        CourseModel("BCom"),
+//        CourseModel("MA"),
+//        CourseModel("MSc"),
+//        CourseModel("MCom"),
+//    )
+
     private val courseList = listOf(
-        CourseModel("BA"),
-        CourseModel("BSc"),
-        CourseModel("BCom"),
-        CourseModel("MA"),
-        CourseModel("MSc"),
-        CourseModel("MCom"),
+        CourseModel("BA", R.drawable.art),
+        CourseModel("BSc", R.drawable.bsc_img),
+        CourseModel("BCom", R.drawable.bcom1),
+        CourseModel("MA", R.drawable.history),
+        CourseModel("MSc", R.drawable.bsc1),
+        CourseModel("MCom", R.drawable.bcom),
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,10 +58,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         //  binding.tv.text = "welcom to tilak college study app"
-        binding.tv.setOnClickListener {
-            viewModel.logout()
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
+//        binding.tv.setOnClickListener {
+//            viewModel.logout()
+//            startActivity(Intent(this, LoginActivity::class.java))
+//        }
         val adapter = CourseAdapter(courseList) { selectedCourse ->
             val intent = Intent(this, YearSelectionActivity::class.java)
             intent.putExtra("course", selectedCourse)
@@ -60,7 +69,18 @@ class MainActivity : AppCompatActivity() {
         }
 
         recyclerView.adapter = adapter
-
+        binding.home.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+        binding.noti.setOnClickListener {
+            startActivity(Intent(this, NotificationActivity::class.java))
+        }
+        binding.edit.setOnClickListener {
+            startActivity(Intent(this,UpdateActivity::class.java))
+        }
+        binding.user.setOnClickListener {
+            startActivity(Intent(this,ContactUsActivity::class.java))
+        }
 
     }
 

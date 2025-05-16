@@ -39,6 +39,19 @@ class MaterialOptionsActivity : AppCompatActivity() {
         binding.btnPYQ.setOnClickListener {
             openMaterialActivity("Previous Year Questions")
         }
+
+        binding.home.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+        binding.noti.setOnClickListener {
+            startActivity(Intent(this, NotificationActivity::class.java))
+        }
+        binding.edit.setOnClickListener {
+            startActivity(Intent(this,UpdateActivity::class.java))
+        }
+        binding.user.setOnClickListener {
+            startActivity(Intent(this,ContactUsActivity::class.java))
+        }
     }
     private fun openMaterialActivity(type: String) {
         val intent = Intent(this, PdfListActivity::class.java)

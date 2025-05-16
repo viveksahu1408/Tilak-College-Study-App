@@ -8,16 +8,21 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/img"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/img"
+        android:roundIcon="@mipmap/main_icon_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.TilakCollegeStudy"
         tools:targetApi="31">
         <activity
-            android:name=".ui.NotificationActivity"
+            android:name=".ui.ContactUsActivity"
             android:exported="false" />
-        <!-- Sab activities yahin rahengi -->
+        <activity
+            android:name=".ui.UpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.NotificationActivity"
+            android:exported="false" /> <!-- Sab activities yahin rahengi -->
         <activity
             android:name=".ui.PdfListActivity"
             android:exported="false" />
@@ -48,8 +53,7 @@
 
         <service
             android:name=".data.repository.MyFirebaseMessagingService"
-            android:exported="false"
-           >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
